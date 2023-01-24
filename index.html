@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kritsakorn Work Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1> MR. Somphong Doungjun</h1>
+    <img src="img/01.jpg" alt="" width="350" height="350"> <br> <br>
+    <p>กรุณากรอกคะแนนเพื่อแสดงเกรด : <input type="text" id="score">
+    <button onclick="clickint()"> กดเพื่อดูคะแนน </button>
+    <h1 id="demo"> </h1>
+
+</body>
+<script>
+    function clickint() {
+        var input = document.getElementById("score").value;
+        if (input >= 80 && input <= 100) {
+            document.getElementById("demo").innerHTML = "คะแนนของคุณ " + input + " คะแนน เกรด A";
+        }else if (input >= 75 && input <= 79 ) {
+            document.getElementById("demo").innerHTML = "คะแนนของคุณ " + input + " คะแนน เกรด B+ ";
+        }else if (input >= 70 && input <= 74 ) {
+            document.getElementById("demo").innerHTML = "คะแนนของคุณ " + input + " คะแนน เกรด B";
+        }else if (input >= 65 && input <= 69 ) {
+            document.getElementById("demo").innerHTML = "คะแนนของคุณ " + input + " คะแนน เกรด C+";
+        }else if (input >= 60 && input <= 64 ) {
+                document.getElementById("demo").innerHTML = "คะแนนของคุณ " + input + " คะแนน เกรด C";
+        }else if (input >= 55 && input <= 59 ) {
+                document.getElementById("demo").innerHTML = "คะแนนของคุณ " + input + " คะแนน เกรด D+";
+        }else if (input >= 50 && input <= 54 ) {
+                document.getElementById("demo").innerHTML = "คะแนนของคุณ " + input + " คะแนน เกรด D";
+        }else if (input >= 0 && input <= 49 ) {
+                document.getElementById("demo").innerHTML = "คะแนนของคุณ " + input + " คะแนน เกรด E";
+        }
+        else{
+            document.getElementById("demo").innerHTML = "ไม่มีข้อมูล";
+        }
+    }
+</script>
+
+</html>
